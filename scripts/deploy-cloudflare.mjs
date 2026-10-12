@@ -17,7 +17,8 @@ try{
   binding.database_id=found.uuid;
   writeFileSync(rootConfig,JSON.stringify(config,null,2)+'\n');
  }
- run(['d1','migrations','apply','DB','--remote','--config',rootConfig,'--yes']);
+ // migrations apply skips confirmation in CI; unlike d1 execute it has no --yes flag.
+ run(['d1','migrations','apply','DB','--remote','--config',rootConfig]);
  run(['deploy','--config',rootConfig]);
  console.log('Deployment complete. Next: configure secrets and initialize /admin. See docs/DEPLOY.md.');
 }catch(e){console.error(e.message);process.exitCode=1;}
