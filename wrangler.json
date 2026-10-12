@@ -28,7 +28,9 @@
     }
   ],
   "vars": {
-    "DEMO_MODE": "false"
+    "DEMO_MODE": "false",
+    "TRON_RECEIVING_ADDRESS": "TPoB2HAiDwytbiVFoFQHh7h8cUwo9zDg6Y",
+    "USDT_CNY_RATE": "6.6"
   },
   "observability": {
     "enabled": true

@@ -17,7 +17,9 @@
 
 无需向任何人提供钱包私钥、助记词或钱包密码。API Key 不写入 GitHub，也不粘贴到网站前端。`INVENTORY_KEY` 是原有库存加密密钥，不能为了开支付重新生成或替换。
 
-设置保存后重新部署，在后台检查状态。根 `wrangler.json` 使用 `keep_vars=true`，保留在 Cloudflare 后台填写的支付变量；默认不在仓库中启用收款。
+设置保存后重新部署，在后台检查状态。根 `wrangler.json` 使用 `keep_vars=true`，保留未在仓库声明的运行变量。
+
+当前 `chongqi-commerce` 正式部署仓库已在 `wrangler.json` 的 `vars` 中预设商家收款地址与 `1 USDT = 6.6 元` 汇率。每次代码部署会重新应用这两项值；以后修改地址或汇率时，请同步修改本仓库配置。`PAYMENT_PROVIDER` 收款开关和 `TRONGRID_API_KEY` 查询密钥仍由 Cloudflare 的运行配置管理，查询密钥必须设置为 Secret。完成配置核对与测试商品准备后，再开启收款进行小额实付验收。
 
 ## 客户付款流程
 
