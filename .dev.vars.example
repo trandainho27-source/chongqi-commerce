@@ -1,0 +1,11 @@
+# Set your own values in Cloudflare Workers Settings / Variables and Secrets.
+# INVENTORY_KEY must contain exactly 64 hexadecimal characters; never change it after importing stock.
+INVENTORY_KEY=
+# BOOTSTRAP_TOKEN is a random one-time setup token for creating the first owner account.
+BOOTSTRAP_TOKEN=
+
+# Optional: required only for production TRC20 USDT payment verification.
+# This is a read-only TronGrid API key, never a wallet private key.
+TRONGRID_API_KEY=
+# Configure PAYMENT_PROVIDER=trc20, TRON_RECEIVING_ADDRESS and USDT_CNY_RATE
+# as ordinary Cloudflare variables. See docs/PAYMENTS.md.

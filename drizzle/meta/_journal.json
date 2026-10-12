@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1791775757496,
+      "tag": "0000_fast_glorian",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1791776620019,
+      "tag": "0001_youthful_millenium_guard",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1791777413673,
+      "tag": "0002_curly_vance_astro",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1791780074166,
+      "tag": "0003_familiar_timeslip",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1791780332012,
+      "tag": "0004_tearful_sharon_ventura",
+      "breakpoints": true
+    }
+  ]
+}

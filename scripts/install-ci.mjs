@@ -1,0 +1,11 @@
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+import { readExecutionProfile } from './execution-profile.mjs';
+if (!process.env.npm_execpath) throw new Error('Run npm run install:ci.');
+process.env.SHARP_IGNORE_GLOBAL_LIBVIPS ??= '1';
+const managed=readExecutionProfile()==='managed-linux';
+const executable=managed?'bash':process.execPath;
+const args=managed?[fileURLToPath(new URL('./install-pnpm.sh',import.meta.url))]:[process.env.npm_execpath,'exec','--yes','--package=pnpm@11.25.0','--','pnpm','install','--frozen-lockfile','--prod=false','--prefer-offline'];
+const result=spawnSync(executable,args,{stdio:'inherit',env:process.env});
+if(result.error) throw result.error;
+process.exitCode=result.status??1;
