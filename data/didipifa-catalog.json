@@ -1,0 +1,2024 @@
+{
+  "supplier": "didipifa",
+  "sourceUrl": "https://didipifa.net/",
+  "snapshotAt": "2026-10-13T01:24:33.534137+00:00",
+  "categories": [
+    {
+      "id": 1,
+      "name": "电报账号",
+      "count": 29
+    },
+    {
+      "id": 10,
+      "name": "电报2月~1年",
+      "count": 24
+    },
+    {
+      "id": 11,
+      "name": "电报1年以上",
+      "count": 22
+    },
+    {
+      "id": 5,
+      "name": "推特账号",
+      "count": 5
+    },
+    {
+      "id": 3,
+      "name": "苹果账号",
+      "count": 9
+    },
+    {
+      "id": 4,
+      "name": "谷歌账号",
+      "count": 6
+    },
+    {
+      "id": 6,
+      "name": "GPT系列",
+      "count": 4
+    },
+    {
+      "id": 8,
+      "name": "其他账号",
+      "count": 5
+    },
+    {
+      "id": 2,
+      "name": "电报业务",
+      "count": 10
+    }
+  ],
+  "products": [
+    {
+      "goodsId": 541,
+      "name": "【加拿大+1】💎2-3天会员账号【批次2】",
+      "categoryId": 1,
+      "displayPriceCents": 360,
+      "sourceUrl": "https://didipifa.net/buy/541",
+      "deliveryType": "automatic",
+      "region": "加拿大",
+      "regionCode": "CA",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "CA"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 459,
+      "name": "【美国+1】💎2-3天会员账号",
+      "categoryId": 1,
+      "displayPriceCents": 540,
+      "sourceUrl": "https://didipifa.net/buy/459",
+      "deliveryType": "unknown",
+      "region": "美国",
+      "regionCode": "US",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "US"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 550,
+      "name": "【印尼+62】💎2-3天会员账号",
+      "categoryId": 1,
+      "displayPriceCents": 590,
+      "sourceUrl": "https://didipifa.net/buy/550",
+      "deliveryType": "unknown",
+      "region": "印尼",
+      "regionCode": "ID",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "ID"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 508,
+      "name": "【智利+56】💎2-3天会员账号",
+      "categoryId": 1,
+      "displayPriceCents": 690,
+      "sourceUrl": "https://didipifa.net/buy/508",
+      "deliveryType": "unknown",
+      "region": "智利",
+      "regionCode": "CL",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "CL"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 347,
+      "name": "【美国+1】 💎周会员账号",
+      "categoryId": 1,
+      "displayPriceCents": 1099,
+      "sourceUrl": "https://didipifa.net/buy/347",
+      "deliveryType": "unknown",
+      "region": "美国",
+      "regionCode": "US",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "US"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 397,
+      "name": "【美国+1】半年-10年  💎周会员账号",
+      "categoryId": 1,
+      "displayPriceCents": 1490,
+      "sourceUrl": "https://didipifa.net/buy/397",
+      "deliveryType": "unknown",
+      "region": "美国",
+      "regionCode": "US",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "US"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 278,
+      "name": "【美国+1】 1~2年老号💎月会员账号【👍长期用推荐】",
+      "categoryId": 1,
+      "displayPriceCents": 3250,
+      "sourceUrl": "https://didipifa.net/buy/278",
+      "deliveryType": "unknown",
+      "region": "美国",
+      "regionCode": "US",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "US"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 297,
+      "name": "【随机国家】【双向撸毛号】",
+      "categoryId": 1,
+      "displayPriceCents": 100,
+      "sourceUrl": "https://didipifa.net/buy/297",
+      "deliveryType": "unknown",
+      "region": "随机地区",
+      "regionCode": null,
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 438,
+      "name": "【印度+91】【双向撸毛号】",
+      "categoryId": 1,
+      "displayPriceCents": 100,
+      "sourceUrl": "https://didipifa.net/buy/438",
+      "deliveryType": "unknown",
+      "region": "印度",
+      "regionCode": "IN",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "IN"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 475,
+      "name": "【美国+1】【双向撸毛号】",
+      "categoryId": 1,
+      "displayPriceCents": 100,
+      "sourceUrl": "https://didipifa.net/buy/475",
+      "deliveryType": "unknown",
+      "region": "美国",
+      "regionCode": "US",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "US"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 411,
+      "name": "【印度+91】1~12月",
+      "categoryId": 1,
+      "displayPriceCents": 219,
+      "sourceUrl": "https://didipifa.net/buy/411",
+      "deliveryType": "unknown",
+      "region": "印度",
+      "regionCode": "IN",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "IN"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 504,
+      "name": "【美国+1】批次2",
+      "categoryId": 1,
+      "displayPriceCents": 220,
+      "sourceUrl": "https://didipifa.net/buy/504",
+      "deliveryType": "unknown",
+      "region": "美国",
+      "regionCode": "US",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "US"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 198,
+      "name": "【缅甸+95】",
+      "categoryId": 1,
+      "displayPriceCents": 248,
+      "sourceUrl": "https://didipifa.net/buy/198",
+      "deliveryType": "unknown",
+      "region": "缅甸",
+      "regionCode": "MM",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "MM"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 263,
+      "name": "【美国+1】 👍推荐",
+      "categoryId": 1,
+      "displayPriceCents": 249,
+      "sourceUrl": "https://didipifa.net/buy/263",
+      "deliveryType": "unknown",
+      "region": "美国",
+      "regionCode": "US",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "US"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 268,
+      "name": "【哥伦比亚+57】",
+      "categoryId": 1,
+      "displayPriceCents": 260,
+      "sourceUrl": "https://didipifa.net/buy/268",
+      "deliveryType": "unknown",
+      "region": "哥伦比亚",
+      "regionCode": "CO",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "CO"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 367,
+      "name": "【孟加拉+880】",
+      "categoryId": 1,
+      "displayPriceCents": 260,
+      "sourceUrl": "https://didipifa.net/buy/367",
+      "deliveryType": "unknown",
+      "region": "孟加拉",
+      "regionCode": "BD",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "BD"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 313,
+      "name": "【智利+56】1~3个月",
+      "categoryId": 1,
+      "displayPriceCents": 290,
+      "sourceUrl": "https://didipifa.net/buy/313",
+      "deliveryType": "unknown",
+      "region": "智利",
+      "regionCode": "CL",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "CL"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 452,
+      "name": "【印尼+62】",
+      "categoryId": 1,
+      "displayPriceCents": 290,
+      "sourceUrl": "https://didipifa.net/buy/452",
+      "deliveryType": "unknown",
+      "region": "印尼",
+      "regionCode": "ID",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "ID"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 250,
+      "name": "【英国+44】",
+      "categoryId": 1,
+      "displayPriceCents": 299,
+      "sourceUrl": "https://didipifa.net/buy/250",
+      "deliveryType": "unknown",
+      "region": "英国",
+      "regionCode": "GB",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "GB"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 536,
+      "name": "【中国+86】",
+      "categoryId": 1,
+      "displayPriceCents": 339,
+      "sourceUrl": "https://didipifa.net/buy/536",
+      "deliveryType": "unknown",
+      "region": "中国",
+      "regionCode": "CN",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "CN"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 364,
+      "name": "【菲律宾+63】",
+      "categoryId": 1,
+      "displayPriceCents": 390,
+      "sourceUrl": "https://didipifa.net/buy/364",
+      "deliveryType": "unknown",
+      "region": "菲律宾",
+      "regionCode": "PH",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "PH"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 442,
+      "name": "【阿根廷+54】",
+      "categoryId": 1,
+      "displayPriceCents": 450,
+      "sourceUrl": "https://didipifa.net/buy/442",
+      "deliveryType": "unknown",
+      "region": "阿根廷",
+      "regionCode": "AR",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "AR"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 449,
+      "name": "【厄瓜多尔+593】",
+      "categoryId": 1,
+      "displayPriceCents": 450,
+      "sourceUrl": "https://didipifa.net/buy/449",
+      "deliveryType": "unknown",
+      "region": "厄瓜多尔",
+      "regionCode": "EC",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "EC"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 450,
+      "name": "【泰国+66】",
+      "categoryId": 1,
+      "displayPriceCents": 490,
+      "sourceUrl": "https://didipifa.net/buy/450",
+      "deliveryType": "unknown",
+      "region": "泰国",
+      "regionCode": "TH",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "TH"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 535,
+      "name": "【柬埔寨+855】",
+      "categoryId": 1,
+      "displayPriceCents": 499,
+      "sourceUrl": "https://didipifa.net/buy/535",
+      "deliveryType": "unknown",
+      "region": "柬埔寨",
+      "regionCode": "KH",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "KH"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 529,
+      "name": "【泰国+66 6】",
+      "categoryId": 1,
+      "displayPriceCents": 550,
+      "sourceUrl": "https://didipifa.net/buy/529",
+      "deliveryType": "unknown",
+      "region": "泰国",
+      "regionCode": "TH",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "TH"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 466,
+      "name": "【波兰+48】",
+      "categoryId": 1,
+      "displayPriceCents": 590,
+      "sourceUrl": "https://didipifa.net/buy/466",
+      "deliveryType": "unknown",
+      "region": "波兰",
+      "regionCode": "PL",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "PL"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 238,
+      "name": "【日本+81】1个月",
+      "categoryId": 1,
+      "displayPriceCents": 680,
+      "sourceUrl": "https://didipifa.net/buy/238",
+      "deliveryType": "unknown",
+      "region": "日本",
+      "regionCode": "JP",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "JP"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 218,
+      "name": "【土耳其+90】2-3个月",
+      "categoryId": 1,
+      "displayPriceCents": 690,
+      "sourceUrl": "https://didipifa.net/buy/218",
+      "deliveryType": "unknown",
+      "region": "土耳其",
+      "regionCode": "TR",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "TR"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 505,
+      "name": "【加拿大+1】6-12月【⚠️只可用协议 | 手机不能登录】",
+      "categoryId": 10,
+      "displayPriceCents": 150,
+      "sourceUrl": "https://didipifa.net/buy/505",
+      "deliveryType": "unknown",
+      "region": "加拿大",
+      "regionCode": "CA",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "CA"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 300,
+      "name": "【印度+91】2~12月",
+      "categoryId": 10,
+      "displayPriceCents": 277,
+      "sourceUrl": "https://didipifa.net/buy/300",
+      "deliveryType": "unknown",
+      "region": "印度",
+      "regionCode": "IN",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "IN"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 68,
+      "name": "【格陵兰+299】【⚠️只可用协议 | 手机不能登录】",
+      "categoryId": 10,
+      "displayPriceCents": 290,
+      "sourceUrl": "https://didipifa.net/buy/68",
+      "deliveryType": "unknown",
+      "region": "格陵兰",
+      "regionCode": "GL",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "GL"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 396,
+      "name": "【美国+1】2-6月👍推荐",
+      "categoryId": 10,
+      "displayPriceCents": 290,
+      "sourceUrl": "https://didipifa.net/buy/396",
+      "deliveryType": "unknown",
+      "region": "美国",
+      "regionCode": "US",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "US"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 398,
+      "name": "【巴基斯坦+92】6-12个月",
+      "categoryId": 10,
+      "displayPriceCents": 290,
+      "sourceUrl": "https://didipifa.net/buy/398",
+      "deliveryType": "unknown",
+      "region": "巴基斯坦",
+      "regionCode": "PK",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "PK"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 337,
+      "name": "【加拿大+1】6-10个月🔥特价",
+      "categoryId": 10,
+      "displayPriceCents": 299,
+      "sourceUrl": "https://didipifa.net/buy/337",
+      "deliveryType": "unknown",
+      "region": "加拿大",
+      "regionCode": "CA",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "CA"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 416,
+      "name": "【哥伦比亚+57】6-9月",
+      "categoryId": 10,
+      "displayPriceCents": 299,
+      "sourceUrl": "https://didipifa.net/buy/416",
+      "deliveryType": "unknown",
+      "region": "哥伦比亚",
+      "regionCode": "CO",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "CO"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 542,
+      "name": "【孟加拉+880】6-12个月",
+      "categoryId": 10,
+      "displayPriceCents": 330,
+      "sourceUrl": "https://didipifa.net/buy/542",
+      "deliveryType": "unknown",
+      "region": "孟加拉",
+      "regionCode": "BD",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "BD"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 413,
+      "name": "【美国+1】6-12个月👍推荐",
+      "categoryId": 10,
+      "displayPriceCents": 350,
+      "sourceUrl": "https://didipifa.net/buy/413",
+      "deliveryType": "unknown",
+      "region": "美国",
+      "regionCode": "US",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "US"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 323,
+      "name": "【印尼+62】6-12个月",
+      "categoryId": 10,
+      "displayPriceCents": 380,
+      "sourceUrl": "https://didipifa.net/buy/323",
+      "deliveryType": "unknown",
+      "region": "印尼",
+      "regionCode": "ID",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "ID"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 548,
+      "name": "【斯里兰卡+94】6-12个月",
+      "categoryId": 10,
+      "displayPriceCents": 430,
+      "sourceUrl": "https://didipifa.net/buy/548",
+      "deliveryType": "unknown",
+      "region": "斯里兰卡",
+      "regionCode": "LK",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "LK"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 523,
+      "name": "【俄罗斯+79】2~5个月【只能用协议|手机不能登录】",
+      "categoryId": 10,
+      "displayPriceCents": 450,
+      "sourceUrl": "https://didipifa.net/buy/523",
+      "deliveryType": "unknown",
+      "region": "俄罗斯",
+      "regionCode": "RU",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "RU"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 399,
+      "name": "【智利+56】6-8个月",
+      "categoryId": 10,
+      "displayPriceCents": 450,
+      "sourceUrl": "https://didipifa.net/buy/399",
+      "deliveryType": "unknown",
+      "region": "智利",
+      "regionCode": "CL",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "CL"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 544,
+      "name": "【古巴+53】6-12个月",
+      "categoryId": 10,
+      "displayPriceCents": 490,
+      "sourceUrl": "https://didipifa.net/buy/544",
+      "deliveryType": "unknown",
+      "region": "古巴",
+      "regionCode": "CU",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "CU"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 546,
+      "name": "【巴西+55】6-12个月",
+      "categoryId": 10,
+      "displayPriceCents": 490,
+      "sourceUrl": "https://didipifa.net/buy/546",
+      "deliveryType": "unknown",
+      "region": "巴西",
+      "regionCode": "BR",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "BR"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 306,
+      "name": "【伊朗+98】7-9个月",
+      "categoryId": 10,
+      "displayPriceCents": 490,
+      "sourceUrl": "https://didipifa.net/buy/306",
+      "deliveryType": "unknown",
+      "region": "伊朗",
+      "regionCode": "IR",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "IR"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 533,
+      "name": "【乌兹别克斯坦+998】 2-3个月",
+      "categoryId": 10,
+      "displayPriceCents": 499,
+      "sourceUrl": "https://didipifa.net/buy/533",
+      "deliveryType": "unknown",
+      "region": "乌兹别克斯坦",
+      "regionCode": "UZ",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "UZ"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 545,
+      "name": "【越南+84】 6-12个月",
+      "categoryId": 10,
+      "displayPriceCents": 499,
+      "sourceUrl": "https://didipifa.net/buy/545",
+      "deliveryType": "unknown",
+      "region": "越南",
+      "regionCode": "VN",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "VN"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 522,
+      "name": "【马来西亚+60】6-12个月",
+      "categoryId": 10,
+      "displayPriceCents": 550,
+      "sourceUrl": "https://didipifa.net/buy/522",
+      "deliveryType": "unknown",
+      "region": "马来西亚",
+      "regionCode": "MY",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "MY"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": null,
+      "name": "【随机国家4A👑连号】看说明",
+      "categoryId": 10,
+      "displayPriceCents": 666,
+      "sourceUrl": "https://didipifa.net/#group-10",
+      "deliveryType": "unknown",
+      "region": "随机地区",
+      "regionCode": null,
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": null
+      },
+      "reviewReasons": [
+        "upstream_id_not_exposed"
+      ]
+    },
+    {
+      "goodsId": 259,
+      "name": "【英国+44】6-10个月",
+      "categoryId": 10,
+      "displayPriceCents": 690,
+      "sourceUrl": "https://didipifa.net/buy/259",
+      "deliveryType": "unknown",
+      "region": "英国",
+      "regionCode": "GB",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "GB"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 547,
+      "name": "【伯利兹+501】6-10个月",
+      "categoryId": 10,
+      "displayPriceCents": 690,
+      "sourceUrl": "https://didipifa.net/buy/547",
+      "deliveryType": "unknown",
+      "region": "伯利兹",
+      "regionCode": "BZ",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "BZ"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 543,
+      "name": "【台湾+886】6-12个月",
+      "categoryId": 10,
+      "displayPriceCents": 699,
+      "sourceUrl": "https://didipifa.net/buy/543",
+      "deliveryType": "unknown",
+      "region": "台湾",
+      "regionCode": "TW",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "TW"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 501,
+      "name": "【香港+852】3~6个月👍推荐",
+      "categoryId": 10,
+      "displayPriceCents": 699,
+      "sourceUrl": "https://didipifa.net/buy/501",
+      "deliveryType": "unknown",
+      "region": "香港",
+      "regionCode": "HK",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "HK"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 464,
+      "name": "【哥伦比亚+57】1~2年",
+      "categoryId": 11,
+      "displayPriceCents": 320,
+      "sourceUrl": "https://didipifa.net/buy/464",
+      "deliveryType": "unknown",
+      "region": "哥伦比亚",
+      "regionCode": "CO",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "CO"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 381,
+      "name": "【印度+91】1-2年",
+      "categoryId": 11,
+      "displayPriceCents": 355,
+      "sourceUrl": "https://didipifa.net/buy/381",
+      "deliveryType": "unknown",
+      "region": "印度",
+      "regionCode": "IN",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "IN"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 404,
+      "name": "【尼日利亚+234】1年左右",
+      "categoryId": 11,
+      "displayPriceCents": 380,
+      "sourceUrl": "https://didipifa.net/buy/404",
+      "deliveryType": "unknown",
+      "region": "尼日利亚",
+      "regionCode": "NG",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "NG"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 531,
+      "name": "【印度+91】3年",
+      "categoryId": 11,
+      "displayPriceCents": 399,
+      "sourceUrl": "https://didipifa.net/buy/531",
+      "deliveryType": "unknown",
+      "region": "印度",
+      "regionCode": "IN",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "IN"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 526,
+      "name": "【缅甸+95】1年左右",
+      "categoryId": 11,
+      "displayPriceCents": 440,
+      "sourceUrl": "https://didipifa.net/buy/526",
+      "deliveryType": "unknown",
+      "region": "缅甸",
+      "regionCode": "MM",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "MM"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 539,
+      "name": "【埃及+20】1年左右",
+      "categoryId": 11,
+      "displayPriceCents": 450,
+      "sourceUrl": "https://didipifa.net/buy/539",
+      "deliveryType": "unknown",
+      "region": "埃及",
+      "regionCode": "EG",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "EG"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 463,
+      "name": "【哥伦比亚+57】3-5年",
+      "categoryId": 11,
+      "displayPriceCents": 450,
+      "sourceUrl": "https://didipifa.net/buy/463",
+      "deliveryType": "unknown",
+      "region": "哥伦比亚",
+      "regionCode": "CO",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "CO"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 140,
+      "name": "【孟加拉+880】1~2年",
+      "categoryId": 11,
+      "displayPriceCents": 490,
+      "sourceUrl": "https://didipifa.net/buy/140",
+      "deliveryType": "unknown",
+      "region": "孟加拉",
+      "regionCode": "BD",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "BD"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 461,
+      "name": "【巴基斯坦+92】1-2年",
+      "categoryId": 11,
+      "displayPriceCents": 520,
+      "sourceUrl": "https://didipifa.net/buy/461",
+      "deliveryType": "unknown",
+      "region": "巴基斯坦",
+      "regionCode": "PK",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "PK"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 456,
+      "name": "【泰国+66】1年左右",
+      "categoryId": 11,
+      "displayPriceCents": 550,
+      "sourceUrl": "https://didipifa.net/buy/456",
+      "deliveryType": "unknown",
+      "region": "泰国",
+      "regionCode": "TH",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "TH"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 1,
+      "name": "【美国+1】 1~2年【👍长期用推荐】",
+      "categoryId": 11,
+      "displayPriceCents": 590,
+      "sourceUrl": "https://didipifa.net/buy/1",
+      "deliveryType": "unknown",
+      "region": "美国",
+      "regionCode": "US",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "US"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 513,
+      "name": "【随机国家】🎲1~5年",
+      "categoryId": 11,
+      "displayPriceCents": 590,
+      "sourceUrl": "https://didipifa.net/buy/513",
+      "deliveryType": "unknown",
+      "region": "随机地区",
+      "regionCode": null,
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 530,
+      "name": "【印度+91】2020注册",
+      "categoryId": 11,
+      "displayPriceCents": 599,
+      "sourceUrl": "https://didipifa.net/buy/530",
+      "deliveryType": "unknown",
+      "region": "印度",
+      "regionCode": "IN",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "IN"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 480,
+      "name": "【智利+56】 1-2年",
+      "categoryId": 11,
+      "displayPriceCents": 650,
+      "sourceUrl": "https://didipifa.net/buy/480",
+      "deliveryType": "unknown",
+      "region": "智利",
+      "regionCode": "CL",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "CL"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 498,
+      "name": "【巴西+55】1-2年",
+      "categoryId": 11,
+      "displayPriceCents": 650,
+      "sourceUrl": "https://didipifa.net/buy/498",
+      "deliveryType": "unknown",
+      "region": "巴西",
+      "regionCode": "BR",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "BR"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 471,
+      "name": "【越南+84】1~2年",
+      "categoryId": 11,
+      "displayPriceCents": 690,
+      "sourceUrl": "https://didipifa.net/buy/471",
+      "deliveryType": "unknown",
+      "region": "越南",
+      "regionCode": "VN",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "VN"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 534,
+      "name": "【英国+44】1年",
+      "categoryId": 11,
+      "displayPriceCents": 699,
+      "sourceUrl": "https://didipifa.net/buy/534",
+      "deliveryType": "unknown",
+      "region": "英国",
+      "regionCode": "GB",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "GB"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 494,
+      "name": "【乌兹别克斯坦+998】1~2年",
+      "categoryId": 11,
+      "displayPriceCents": 790,
+      "sourceUrl": "https://didipifa.net/buy/494",
+      "deliveryType": "unknown",
+      "region": "乌兹别克斯坦",
+      "regionCode": "UZ",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "UZ"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 499,
+      "name": "【巴西+55】3-4年",
+      "categoryId": 11,
+      "displayPriceCents": 790,
+      "sourceUrl": "https://didipifa.net/buy/499",
+      "deliveryType": "unknown",
+      "region": "巴西",
+      "regionCode": "BR",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "BR"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 512,
+      "name": "【柬埔寨+855】1-2年",
+      "categoryId": 11,
+      "displayPriceCents": 799,
+      "sourceUrl": "https://didipifa.net/buy/512",
+      "deliveryType": "unknown",
+      "region": "柬埔寨",
+      "regionCode": "KH",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "KH"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 532,
+      "name": "【美国+1】3年",
+      "categoryId": 11,
+      "displayPriceCents": 990,
+      "sourceUrl": "https://didipifa.net/buy/532",
+      "deliveryType": "unknown",
+      "region": "美国",
+      "regionCode": "US",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "US"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 255,
+      "name": "【美国+1】5年",
+      "categoryId": 11,
+      "displayPriceCents": 1290,
+      "sourceUrl": "https://didipifa.net/buy/255",
+      "deliveryType": "unknown",
+      "region": "美国",
+      "regionCode": "US",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "US"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 514,
+      "name": "推特账号【只读账号，主页冻结】",
+      "categoryId": 5,
+      "displayPriceCents": 20,
+      "sourceUrl": "https://didipifa.net/buy/514",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "x",
+        "wordmark": "X",
+        "color": "#151515",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 375,
+      "name": "推特账号【新号/2FA/郵箱不可用】",
+      "categoryId": 5,
+      "displayPriceCents": 100,
+      "sourceUrl": "https://didipifa.net/buy/375",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "x",
+        "wordmark": "X",
+        "color": "#151515",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 77,
+      "name": "推特账号【2009-2019注册/token/2FA/hotmail邮箱】",
+      "categoryId": 5,
+      "displayPriceCents": 380,
+      "sourceUrl": "https://didipifa.net/buy/77",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "x",
+        "wordmark": "X",
+        "color": "#151515",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 486,
+      "name": "推特账号【2007-2025注册/token/2FA/hotmail邮箱/带10-30粉丝】",
+      "categoryId": 5,
+      "displayPriceCents": 480,
+      "sourceUrl": "https://didipifa.net/buy/486",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "x",
+        "wordmark": "X",
+        "color": "#151515",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 454,
+      "name": "推特账号【2006-2026注册/token/2FA/hotmail邮箱/带30-100粉丝】",
+      "categoryId": 5,
+      "displayPriceCents": 699,
+      "sourceUrl": "https://didipifa.net/buy/454",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "x",
+        "wordmark": "X",
+        "color": "#151515",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 553,
+      "name": "【美区ID】【无密保/API/可下APP】老",
+      "categoryId": 3,
+      "displayPriceCents": 199,
+      "sourceUrl": "https://didipifa.net/buy/553",
+      "deliveryType": "unknown",
+      "region": "美区",
+      "regionCode": "US",
+      "icon": {
+        "platform": "apple",
+        "wordmark": "ID",
+        "color": "#64748b",
+        "countryCode": "US"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 372,
+      "name": "【香港ID】【无密保/API/可下APP】",
+      "categoryId": 3,
+      "displayPriceCents": 250,
+      "sourceUrl": "https://didipifa.net/buy/372",
+      "deliveryType": "unknown",
+      "region": "香港",
+      "regionCode": "HK",
+      "icon": {
+        "platform": "apple",
+        "wordmark": "ID",
+        "color": "#64748b",
+        "countryCode": "HK"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 491,
+      "name": "【日本ID】【无密保/API/可下APP】",
+      "categoryId": 3,
+      "displayPriceCents": 250,
+      "sourceUrl": "https://didipifa.net/buy/491",
+      "deliveryType": "unknown",
+      "region": "日本",
+      "regionCode": "JP",
+      "icon": {
+        "platform": "apple",
+        "wordmark": "ID",
+        "color": "#64748b",
+        "countryCode": "JP"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 19,
+      "name": "【韩国ID】【半年/带密保/开IC/可下APP】",
+      "categoryId": 3,
+      "displayPriceCents": 440,
+      "sourceUrl": "https://didipifa.net/buy/19",
+      "deliveryType": "unknown",
+      "region": "韩国",
+      "regionCode": "KR",
+      "icon": {
+        "platform": "apple",
+        "wordmark": "ID",
+        "color": "#64748b",
+        "countryCode": "KR"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 285,
+      "name": "【香港ID】【半年/hotmail后缀/带密保/可下APP】",
+      "categoryId": 3,
+      "displayPriceCents": 440,
+      "sourceUrl": "https://didipifa.net/buy/285",
+      "deliveryType": "unknown",
+      "region": "香港",
+      "regionCode": "HK",
+      "icon": {
+        "platform": "apple",
+        "wordmark": "ID",
+        "color": "#64748b",
+        "countryCode": "HK"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 554,
+      "name": "【日本ID】【半年/带密保/开IC/可下APP】",
+      "categoryId": 3,
+      "displayPriceCents": 440,
+      "sourceUrl": "https://didipifa.net/buy/554",
+      "deliveryType": "unknown",
+      "region": "日本",
+      "regionCode": "JP",
+      "icon": {
+        "platform": "apple",
+        "wordmark": "ID",
+        "color": "#64748b",
+        "countryCode": "JP"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 428,
+      "name": "【美区ID】【半年/带密保/微软/可下APP】",
+      "categoryId": 3,
+      "displayPriceCents": 440,
+      "sourceUrl": "https://didipifa.net/buy/428",
+      "deliveryType": "unknown",
+      "region": "美区",
+      "regionCode": "US",
+      "icon": {
+        "platform": "apple",
+        "wordmark": "ID",
+        "color": "#64748b",
+        "countryCode": "US"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 351,
+      "name": "【美区ID】【半年/带密保/没开IC/带火煎】",
+      "categoryId": 3,
+      "displayPriceCents": 1150,
+      "sourceUrl": "https://didipifa.net/buy/351",
+      "deliveryType": "unknown",
+      "region": "美区",
+      "regionCode": "US",
+      "icon": {
+        "platform": "apple",
+        "wordmark": "ID",
+        "color": "#64748b",
+        "countryCode": "US"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 537,
+      "name": "【迅果点数50W】",
+      "categoryId": 3,
+      "displayPriceCents": 43000,
+      "sourceUrl": "https://didipifa.net/buy/537",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "apple",
+        "wordmark": "ID",
+        "color": "#64748b",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 419,
+      "name": "【谷歌接码API】非成品号、无售后",
+      "categoryId": 4,
+      "displayPriceCents": 190,
+      "sourceUrl": "https://didipifa.net/buy/419",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "google",
+        "wordmark": "G",
+        "color": "#4285f4",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 453,
+      "name": "【Google】域名邮箱/辅助邮箱/可开油管/不可用gmail",
+      "categoryId": 4,
+      "displayPriceCents": 290,
+      "sourceUrl": "https://didipifa.net/buy/453",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "google",
+        "wordmark": "G",
+        "color": "#4285f4",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 527,
+      "name": "【Google】新号/美国IP",
+      "categoryId": 4,
+      "displayPriceCents": 399,
+      "sourceUrl": "https://didipifa.net/buy/527",
+      "deliveryType": "unknown",
+      "region": "美国",
+      "regionCode": "US",
+      "icon": {
+        "platform": "google",
+        "wordmark": "G",
+        "color": "#4285f4",
+        "countryCode": "US"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 340,
+      "name": "【Google】7天以上新号/随机IP/👍推荐",
+      "categoryId": 4,
+      "displayPriceCents": 399,
+      "sourceUrl": "https://didipifa.net/buy/340",
+      "deliveryType": "unknown",
+      "region": "随机地区",
+      "regionCode": null,
+      "icon": {
+        "platform": "google",
+        "wordmark": "G",
+        "color": "#4285f4",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 528,
+      "name": "【Google】新号/2FA/手机/随机IP",
+      "categoryId": 4,
+      "displayPriceCents": 499,
+      "sourceUrl": "https://didipifa.net/buy/528",
+      "deliveryType": "unknown",
+      "region": "随机地区",
+      "regionCode": null,
+      "icon": {
+        "platform": "google",
+        "wordmark": "G",
+        "color": "#4285f4",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 540,
+      "name": "【Google】7天以上新号/2FA/随机IP/登gmail无需短信",
+      "categoryId": 4,
+      "displayPriceCents": 550,
+      "sourceUrl": "https://didipifa.net/buy/540",
+      "deliveryType": "unknown",
+      "region": "随机地区",
+      "regionCode": null,
+      "icon": {
+        "platform": "google",
+        "wordmark": "G",
+        "color": "#4285f4",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 473,
+      "name": "【GPT接码API】【可接codex】",
+      "categoryId": 6,
+      "displayPriceCents": 50,
+      "sourceUrl": "https://didipifa.net/buy/473",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "gpt",
+        "wordmark": "GPT",
+        "color": "#10a37f",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 516,
+      "name": "【GPT普号】icloud+gmail邮箱/2FA",
+      "categoryId": 6,
+      "displayPriceCents": 100,
+      "sourceUrl": "https://didipifa.net/buy/516",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "gpt",
+        "wordmark": "GPT",
+        "color": "#10a37f",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 489,
+      "name": "【GPT普号】微软邮箱/看说明",
+      "categoryId": 6,
+      "displayPriceCents": 100,
+      "sourceUrl": "https://didipifa.net/buy/489",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "gpt",
+        "wordmark": "GPT",
+        "color": "#10a37f",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 551,
+      "name": "【GPT接码API】【可接codex】高成功率",
+      "categoryId": 6,
+      "displayPriceCents": 150,
+      "sourceUrl": "https://didipifa.net/buy/551",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "gpt",
+        "wordmark": "GPT",
+        "color": "#10a37f",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 485,
+      "name": "【outlook】长效邮箱/OAuth2 [IMAP/POP3/GRAPH]",
+      "categoryId": 8,
+      "displayPriceCents": 10,
+      "sourceUrl": "https://didipifa.net/buy/485",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "outlook",
+        "wordmark": "O",
+        "color": "#0078d4",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 421,
+      "name": "【Instagram】安卓/2FA/cookie/长期耐用/随机IP",
+      "categoryId": 8,
+      "displayPriceCents": 170,
+      "sourceUrl": "https://didipifa.net/buy/421",
+      "deliveryType": "unknown",
+      "region": "随机地区",
+      "regionCode": null,
+      "icon": {
+        "platform": "instagram",
+        "wordmark": "IG",
+        "color": "#d63e8c",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 308,
+      "name": "【WhatsApp】【加拿大+1 Api】无售后",
+      "categoryId": 8,
+      "displayPriceCents": 190,
+      "sourceUrl": "https://didipifa.net/buy/308",
+      "deliveryType": "unknown",
+      "region": "加拿大",
+      "regionCode": "CA",
+      "icon": {
+        "platform": "whatsapp",
+        "wordmark": "WA",
+        "color": "#25b968",
+        "countryCode": "CA"
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 511,
+      "name": "【Facebook】1个月/2FA/随机IP",
+      "categoryId": 8,
+      "displayPriceCents": 199,
+      "sourceUrl": "https://didipifa.net/buy/511",
+      "deliveryType": "unknown",
+      "region": "随机地区",
+      "regionCode": null,
+      "icon": {
+        "platform": "facebook",
+        "wordmark": "f",
+        "color": "#1877f2",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 309,
+      "name": "【Instagram】2025注册/2FA/随机IP",
+      "categoryId": 8,
+      "displayPriceCents": 450,
+      "sourceUrl": "https://didipifa.net/buy/309",
+      "deliveryType": "unknown",
+      "region": "随机地区",
+      "regionCode": null,
+      "icon": {
+        "platform": "instagram",
+        "wordmark": "IG",
+        "color": "#d63e8c",
+        "countryCode": null
+      },
+      "reviewReasons": []
+    },
+    {
+      "goodsId": 420,
+      "name": "【美国换绑API】【首次】",
+      "categoryId": 2,
+      "displayPriceCents": 250,
+      "sourceUrl": "https://didipifa.net/buy/420",
+      "deliveryType": "automatic",
+      "region": "美国",
+      "regionCode": "US",
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": "US"
+      },
+      "reviewReasons": [
+        "service_requires_review"
+      ]
+    },
+    {
+      "goodsId": 344,
+      "name": "测试专用，付款不退",
+      "categoryId": 2,
+      "displayPriceCents": 1,
+      "sourceUrl": "https://didipifa.net/buy/344",
+      "deliveryType": "automatic",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": null
+      },
+      "reviewReasons": [
+        "supplier_test_link",
+        "requires_extra_fields_unsupported_by_documented_api",
+        "service_requires_review"
+      ]
+    },
+    {
+      "goodsId": 8,
+      "name": "【1元补单链接】【非叫勿拍】",
+      "categoryId": 2,
+      "displayPriceCents": 100,
+      "sourceUrl": "https://didipifa.net/buy/8",
+      "deliveryType": "manual",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": null
+      },
+      "reviewReasons": [
+        "supplier_adjustment_link",
+        "service_requires_review",
+        "manual_delivery"
+      ]
+    },
+    {
+      "goodsId": 4,
+      "name": "【电报服务】安卓+苹果安装包+汉化",
+      "categoryId": 2,
+      "displayPriceCents": 600,
+      "sourceUrl": "https://didipifa.net/buy/4",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": null
+      },
+      "reviewReasons": [
+        "service_requires_review"
+      ]
+    },
+    {
+      "goodsId": 515,
+      "name": "第三方支付平台5个推荐【含本站用的】",
+      "categoryId": 2,
+      "displayPriceCents": 888,
+      "sourceUrl": "https://didipifa.net/buy/515",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": null
+      },
+      "reviewReasons": [
+        "requires_extra_fields_unsupported_by_documented_api",
+        "service_requires_review"
+      ]
+    },
+    {
+      "goodsId": 52,
+      "name": "【电报服务】帮找回老号或注册新号",
+      "categoryId": 2,
+      "displayPriceCents": 5000,
+      "sourceUrl": "https://didipifa.net/buy/52",
+      "deliveryType": "manual",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": null
+      },
+      "reviewReasons": [
+        "requires_extra_fields_unsupported_by_documented_api",
+        "service_requires_review",
+        "manual_delivery"
+      ]
+    },
+    {
+      "goodsId": 492,
+      "name": "+888租赁【一个月】",
+      "categoryId": 2,
+      "displayPriceCents": 39000,
+      "sourceUrl": "https://didipifa.net/buy/492",
+      "deliveryType": "automatic",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": null
+      },
+      "reviewReasons": [
+        "service_requires_review"
+      ]
+    },
+    {
+      "goodsId": 10,
+      "name": "【TG会员3个月12.5U机器人@ddsvip_bot】",
+      "categoryId": 2,
+      "displayPriceCents": 88800,
+      "sourceUrl": "https://didipifa.net/buy/10",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": null
+      },
+      "reviewReasons": [
+        "external_bot_service_link",
+        "requires_extra_fields_unsupported_by_documented_api",
+        "service_requires_review"
+      ]
+    },
+    {
+      "goodsId": 65,
+      "name": "【TG僵尸粉1000=3元机器人@ddjsf_bot】",
+      "categoryId": 2,
+      "displayPriceCents": 88800,
+      "sourceUrl": "https://didipifa.net/buy/65",
+      "deliveryType": "unknown",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": null
+      },
+      "reviewReasons": [
+        "external_bot_service_link",
+        "service_requires_review"
+      ]
+    },
+    {
+      "goodsId": 549,
+      "name": "session+tdata转API接码搭建【机器人管理】",
+      "categoryId": 2,
+      "displayPriceCents": 99900,
+      "sourceUrl": "https://didipifa.net/buy/549",
+      "deliveryType": "automatic",
+      "region": null,
+      "regionCode": null,
+      "icon": {
+        "platform": "telegram",
+        "wordmark": "TG",
+        "color": "#259bd9",
+        "countryCode": null
+      },
+      "reviewReasons": [
+        "service_requires_review"
+      ]
+    }
+  ]
+}

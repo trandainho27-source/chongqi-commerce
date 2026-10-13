@@ -8,6 +8,8 @@ export interface RuntimeEnv {
     TRON_RECEIVING_ADDRESS?: string;
     TRONGRID_API_KEY?: string;
     USDT_CNY_RATE?: string;
+    DIDIPIFA_API_TOKEN?: string;
+    DIDIPIFA_PURCHASE_ENABLED?: string;
 }
 export interface Product {
     id: string;
@@ -27,6 +29,8 @@ export interface Product {
     is_example: number;
     stock: number;
     created_at: number;
+    icon_key?: string;
+    country_code?: string;
 }
 export interface Category {
     id: string;

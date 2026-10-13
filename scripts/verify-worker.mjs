@@ -13,6 +13,11 @@ try{
  for(const file of readdirSync('drizzle').filter(f=>f.endsWith('.sql')).sort()){
   for(const sql of readFileSync('drizzle/'+file,'utf8').split('--> statement-breakpoint').map(s=>s.trim()).filter(Boolean))await db.prepare(sql).run();
  }
+ // Keep the isolated demo-flow fixture separate from the imported production catalog.
+ assert.equal((await db.prepare('SELECT count(*) AS n FROM supplier_goods').first()).n,114);
+ await db.prepare('DELETE FROM supplier_goods').run();
+ await db.prepare("DELETE FROM products WHERE id LIKE 'dp-%'").run();
+ await db.prepare("DELETE FROM categories WHERE id LIKE 'dp-%'").run();
  const request=async(path,body,cookie='',csrf='')=>mf.dispatchFetch('https://store.test'+path,{method:body===undefined?'GET':'POST',headers:{origin:'https://store.test',...(body===undefined?{}:{'content-type':'application/json'}),...(cookie?{cookie,'x-csrf-token':csrf}:{})},...(body===undefined?{}:{body:JSON.stringify(body)})});
  for(const path of ['/','/orders','/help','/admin']){const response=await request(path);assert.equal(response.status,200,`${path} should render`);assert.match(await response.text(),/重启|RESTART/);}
  const catalogResponse=await request('/api/catalog');assert.equal(catalogResponse.status,200);const catalog=await catalogResponse.json();assert.equal(catalog.products.length,12);
@@ -29,9 +34,18 @@ const receivingAddress='TNPeeaaFB7K9cmo4uQpcU32zGK8G1NYqeL';
 const receivingHex='8840e6c55b9ada326d211d818c34a994aeced808';
 const txId='e'.repeat(64);
 let invoice;
-const prod=new Miniflare({modules:files.map(f=>({type:'ESModule',path:resolve('dist/server',f)})),modulesRoot:resolve('dist/server'),compatibilityDate:'2026-05-15',compatibilityFlags:['nodejs_compat'],d1Databases:{DB:'payment-worker-test-db'},bindings:{DEMO_MODE:'false',INVENTORY_KEY:'b'.repeat(64),BOOTSTRAP_TOKEN:'worker-test-bootstrap',PAYMENT_PROVIDER:'trc20',TRON_RECEIVING_ADDRESS:receivingAddress,TRONGRID_API_KEY:'worker-test-query-key',USDT_CNY_RATE:'7'},assets:{directory:resolve('dist/client'),binding:'ASSETS',routerConfig:{has_user_worker:true,invoke_user_worker_ahead_of_assets:true}},cf:false,
+const prod=new Miniflare({modules:files.map(f=>({type:'ESModule',path:resolve('dist/server',f)})),modulesRoot:resolve('dist/server'),compatibilityDate:'2026-05-15',compatibilityFlags:['nodejs_compat'],d1Databases:{DB:'payment-worker-test-db'},bindings:{DEMO_MODE:'false',INVENTORY_KEY:'b'.repeat(64),BOOTSTRAP_TOKEN:'worker-test-bootstrap',PAYMENT_PROVIDER:'trc20',TRON_RECEIVING_ADDRESS:receivingAddress,TRONGRID_API_KEY:'worker-test-query-key',USDT_CNY_RATE:'7',DIDIPIFA_API_TOKEN:'worker-test-supplier',DIDIPIFA_PURCHASE_ENABLED:'true'},assets:{directory:resolve('dist/client'),binding:'ASSETS',routerConfig:{has_user_worker:true,invoke_user_worker_ahead_of_assets:true}},cf:false,
  outboundService:async request=>{
-  const url=new URL(request.url);assert.equal(url.origin,'https://api.trongrid.io');assert.equal(request.headers.get('TRON-PRO-API-KEY'),'worker-test-query-key');
+  const url=new URL(request.url);
+  if(url.origin==='https://didipifa.net'){
+   assert.equal(request.headers.get('Authorization'),'Bearer worker-test-supplier');
+   if(url.pathname.endsWith('/account'))return Response.json({data:{balance:'100.00'}});
+   if(url.pathname.endsWith('/goods/541'))return Response.json({data:{id:541,name:'Supplier runtime fixture',price:'3.60',stock:5,delivery_type:'automatic'}});
+   assert.equal(url.pathname,'/api/v1/orders');assert.equal(request.method,'POST');
+   const p=await request.json();assert.equal(p.goods_id,541);assert.equal(p.quantity,1);
+   return Response.json({data:{order_sn:'SMOKE-DIDI-001',goods_id:p.goods_id,quantity:p.quantity,request_id:p.request_id,status:'fulfilled',total_price:'3.60',cards:['WORKER-SUPPLIER-CARD']}},{headers:{'Request-Id':'smoke-supplier-001'}});
+  }
+  assert.equal(url.origin,'https://api.trongrid.io');assert.equal(request.headers.get('TRON-PRO-API-KEY'),'worker-test-query-key');
   if(url.pathname.includes('/transactions/trc20'))return Response.json({success:true,data:[],meta:{}});
   const body=await request.json();assert.equal(body.value,txId);
   if(url.pathname.endsWith('/gettransactionbyid'))return Response.json({txID:txId,ret:[{contractRet:'SUCCESS'}]});
@@ -61,5 +75,13 @@ try{
  assert.equal((await db.prepare('SELECT count(*) AS n FROM payment_receipts').first()).n,1);
  const worker=await prod.getWorker();await worker.scheduled({cron:'* * * * *'});
  assert.ok((await db.prepare('SELECT last_success_at FROM payment_watchers').first()).last_success_at);
+ assert.equal((await request('admin/supplier',{action:'account'})).balance,10000);
+ const quote=(await request('admin/supplier',{action:'quote',goodsId:541,quantity:1})).quote;
+ await request('admin/supplier',{action:'purchase',id:quote.id,confirm:true});
+ await request('admin/supplier',{action:'purchase',id:quote.id,confirm:true});
+ assert.equal((await db.prepare("SELECT count(*) AS n FROM inventory WHERE product_id='dp-541'").first()).n,1);
+ const supplier=await request('admin/supplier');assert.equal(supplier.purchases[0].status,'imported');
+ assert.ok(!JSON.stringify(supplier).includes('WORKER-SUPPLIER-CARD'));
+ console.log('Cloudflare workerd supplier verification passed: catalog migration, quote, confirmed purchase, encrypted inventory and idempotent replays; mock upstream only.');
  console.log('Cloudflare workerd TRC20 verification passed: production bootstrap, invoice, upstream receipt verification, atomic delivery, replay, background scheduled handler. No real funds or external RPC used.');
 }finally{await prod.dispose();}

@@ -57,6 +57,8 @@ class DB {
 }
 async function setup(demo = true) {
     const db = new DB(), env: any = { DB: db, DEMO_MODE: demo ? 'true' : 'false', INVENTORY_KEY: 'a'.repeat(64), BOOTSTRAP_TOKEN: 'test-setup-token' };
+    // Most tests need an isolated merchant fixture; the catalog migration is tested separately below.
+    db.raw.exec("DELETE FROM supplier_goods; DELETE FROM products WHERE id LIKE 'dp-%'; DELETE FROM categories WHERE id LIKE 'dp-%';");
     let cookie = '', csrf = '';
     async function req(path: string, b?: any, extra: Record<string, string> = {}) {
         const method = b === undefined ? 'GET' : 'POST';
@@ -398,4 +400,129 @@ test('failed background pages preserve the cursor and can be resumed', async t =
     await runPaymentReconciliation(s.env);
     assert.ok(s.db.raw.prepare('SELECT last_success_at FROM payment_watchers').get()!.last_success_at);
     assert.equal(s.db.raw.prepare('SELECT last_error FROM payment_watchers').get()!.last_error, '');
+});
+
+test('supplier catalog migration imports 114 real listings without fake inventory and preserves edits on replay', async () => {
+    const db = new DB();
+    assert.equal(db.raw.prepare('SELECT count(*) AS n FROM supplier_goods').get()!.n, 114);
+    assert.equal(db.raw.prepare("SELECT count(*) AS n FROM categories WHERE id LIKE 'dp-%'").get()!.n, 9);
+    assert.equal(db.raw.prepare('SELECT count(*) AS n FROM inventory').get()!.n, 0);
+    assert.equal(db.raw.prepare('SELECT count(*) AS n FROM supplier_goods WHERE goods_id IS NULL').get()!.n, 1);
+    db.raw.prepare("UPDATE products SET price=1999,active=0 WHERE id='dp-541'").run();
+    db.raw.exec(readFileSync('drizzle/0006_didipifa_catalog.sql', 'utf8'));
+    assert.equal(db.raw.prepare("SELECT price FROM products WHERE id='dp-541'").get()!.price, 1999);
+    assert.equal(db.raw.prepare("SELECT active FROM products WHERE id='dp-541'").get()!.active, 0);
+    assert.equal(db.raw.prepare('SELECT count(*) AS n FROM supplier_goods').get()!.n, 114);
+});
+async function supplierSetup() {
+    const s = await setup(false);
+    await s.req('auth/setup', { username: 'owner', password: 'long-password-123', token: 'test-setup-token' });
+    await s.req('admin/categories', { id: 'source', name: '货源测试', sort: 0, active: true });
+    await s.req('admin/products', { id: 'supplier-test', category_id: 'source', name: '测试商品', price: 500, min_qty: 1, max_qty: 30, active: true });
+    s.db.raw.prepare("INSERT INTO supplier_goods(product_id,goods_id,source_url,reference_price,delivery_type) VALUES('supplier-test',541,'https://didipifa.net/buy/541',360,'automatic')").run();
+    s.env.DIDIPIFA_API_TOKEN = 'fixture-supplier-token';
+    s.env.DIDIPIFA_PURCHASE_ENABLED = 'true';
+    return s;
+}
+function supplierMock(t: any, options: any = {}) {
+    const posts: any[] = [], gets: string[] = [];
+    t.mock.method(globalThis, 'fetch', async (input: string, init: any) => {
+        const url = new URL(input); assert.equal(url.origin, 'https://didipifa.net');
+        assert.equal(init.redirect, 'manual'); assert.equal(init.headers.Authorization, 'Bearer fixture-supplier-token');
+        if (init.method === 'GET') gets.push(url.pathname);
+        const good = { id: 541, name: '测试商品', price: options.price || '3.60', stock: 50, delivery_type: 'automatic' };
+        if (url.pathname.endsWith('/account')) return Response.json({data: {balance: '12.34'}});
+        if (url.pathname.endsWith('/goods')) return Response.json({data: [good]});
+        if (url.pathname.endsWith('/goods/541')) return Response.json({data: good});
+        if (init.method === 'POST') {
+            posts.push(JSON.parse(init.body));
+            assert.equal(posts.at(-1).notify_email, undefined);
+            if (options.timeoutOnce && posts.length === 1) throw new Error('private upstream body and token');
+        }
+        const body = posts[0];
+        if (options.httpError) return new Response('private error detail', {status: options.httpError, headers: {'Request-Id': 'support-request-123'}});
+        return Response.json({data: {order_sn: 'DIDI-001', goods_id: options.wrongGood ? 99 : 541, quantity: body.quantity, request_id: body.request_id, status: options.pending ? 'pending' : 'fulfilled', total_price: options.total || '3.60', cards: options.cards || ['SUPPLIER-SECRET-CARD']}}, {headers: {'Request-Id': 'support-request-123'}});
+    });
+    return {posts, gets};
+}
+test('supplier endpoint is owner-only, CSRF protected, and credentials and purchase switch fail closed', async t => {
+    const s = await supplierSetup(); supplierMock(t);
+    assert.equal((await s.req('admin/supplier', {action: 'sync'}, {'x-csrf-token': 'bad'})).r.status, 403);
+    delete s.env.DIDIPIFA_API_TOKEN;
+    assert.equal((await s.req('admin/supplier', {action: 'account'})).r.status, 503);
+    s.env.DIDIPIFA_API_TOKEN = 'fixture-supplier-token';
+    const quote = (await s.req('admin/supplier', {action: 'quote', goodsId: 541, quantity: 1})).d.quote;
+    delete s.env.DIDIPIFA_PURCHASE_ENABLED;
+    assert.equal((await s.req('admin/supplier', {action: 'purchase', id: quote.id, confirm: true})).r.status, 403);
+    await s.req('admin/staff', {username: 'operator', password: 'test-passphrase-123', role: 'operator'});
+    await s.req('auth/logout', {}); await s.req('auth/login', {username: 'operator', password: 'test-passphrase-123'});
+    assert.equal((await s.req('admin/supplier')).r.status, 403);
+});
+test('supplier sync and quotes cannot purchase, change retail prices or create sellable stock', async t => {
+    const s = await supplierSetup(), calls = supplierMock(t);
+    assert.equal((await s.req('admin/supplier', {action: 'account'})).d.balance, 1234);
+    assert.equal((await s.req('admin/supplier', {action: 'sync'})).d.synced, 1);
+    assert.equal((await s.req('admin/supplier', {action: 'quote', goodsId: 541, quantity: 1})).d.quote.total, 360);
+    assert.equal(calls.posts.length, 0);
+    const p = (await s.req('catalog')).d.products[0]; assert.equal(p.price, 500); assert.equal(p.stock, 0);
+    assert.equal((await s.req('orders', orderBody(p.id))).r.status, 409);
+    const dashboard = await s.req('admin/supplier');
+    assert.equal(dashboard.d.goods[0].upstream_stock, 50);
+    assert.ok(!JSON.stringify(dashboard.d).includes('fixture-supplier-token'));
+});
+test('supplier timeout recovery reuses request_id, encrypts cards, and only imports once', async t => {
+    const s = await supplierSetup(), calls = supplierMock(t, {timeoutOnce: true});
+    const q = (await s.req('admin/supplier', {action: 'quote', goodsId: 541, quantity: 1})).d.quote;
+    const payload = {action: 'purchase', id: q.id, confirm: true};
+    const failed = await s.req('admin/supplier', payload); assert.equal(failed.r.status, 502);
+    assert.ok(!JSON.stringify(failed.d).includes('private upstream'));
+    assert.equal(s.db.raw.prepare('SELECT status FROM supplier_purchases').get()!.status, 'uncertain');
+    const result = await s.req('admin/supplier', payload); assert.equal(result.r.status, 200, JSON.stringify(result.d));
+    assert.deepEqual(calls.posts[0], calls.posts[1]);
+    const row: any = s.db.raw.prepare('SELECT * FROM inventory').get();
+    assert.ok(!row.ciphertext.includes('SUPPLIER-SECRET-CARD'));
+    assert.equal(await decrypt(row.ciphertext, s.env.INVENTORY_KEY, 'supplier-test'), 'SUPPLIER-SECRET-CARD');
+    assert.equal((await s.req('admin/supplier', payload)).r.status, 200);
+    assert.equal(calls.posts.length, 2); assert.equal(s.db.raw.prepare('SELECT count(*) AS n FROM inventory').get()!.n, 1);
+    const dashboard = JSON.stringify((await s.req('admin/supplier')).d);
+    assert.ok(!dashboard.includes('SUPPLIER-SECRET-CARD')); assert.ok(!dashboard.includes('encrypted_response'));
+});
+test('supplier pending delivery is recoverable by GET order, without a second purchase', async t => {
+    const s = await supplierSetup(), options = {pending: true}, calls = supplierMock(t, options);
+    const q = (await s.req('admin/supplier', {action: 'quote', goodsId: 541, quantity: 1})).d.quote;
+    const payload = {action: 'purchase', id: q.id, confirm: true};
+    assert.equal((await s.req('admin/supplier', payload)).r.status, 502);
+    const record: any = s.db.raw.prepare('SELECT * FROM supplier_purchases').get();
+    assert.equal(record.status, 'review'); assert.equal(record.order_sn, 'DIDI-001'); assert.ok(record.encrypted_response);
+    options.pending = false;
+    assert.equal((await s.req('admin/supplier', payload)).r.status, 200);
+    assert.equal(calls.posts.length, 1); assert.ok(calls.gets.includes('/api/v1/orders/DIDI-001'));
+});
+test('supplier cards are not imported for mismatched product, quantities, totals or duplicate content', async t => {
+    const s = await supplierSetup(), options: any = {wrongGood: true}; supplierMock(t, options);
+    const q = (await s.req('admin/supplier', {action: 'quote', goodsId: 541, quantity: 1})).d.quote;
+    const payload = {action: 'purchase', id: q.id, confirm: true};
+    assert.equal((await s.req('admin/supplier', payload)).r.status, 502);
+    options.wrongGood = false; options.cards = ['one', 'two'];
+    assert.equal((await s.req('admin/supplier', payload)).r.status, 502);
+    options.cards = ['SUPPLIER-SECRET-CARD']; options.total = '9.99';
+    assert.equal((await s.req('admin/supplier', payload)).r.status, 502);
+    assert.equal(s.db.raw.prepare('SELECT count(*) AS n FROM inventory').get()!.n, 0);
+    options.total = '3.60';
+    await s.req('admin/inventory', {product_id: 'supplier-test', codes: 'SUPPLIER-SECRET-CARD'});
+    assert.equal((await s.req('admin/supplier', payload)).r.status, 502);
+    assert.equal(s.db.raw.prepare('SELECT count(*) AS n FROM inventory').get()!.n, 1);
+    assert.equal(s.db.raw.prepare('SELECT count(*) AS n FROM supplier_cards').get()!.n, 0);
+});
+test('supplier price changes, blocked services and rate limits stop procurement before a charge', async t => {
+    const s = await supplierSetup(), options: any = {}, calls = supplierMock(t, options);
+    const q = (await s.req('admin/supplier', {action: 'quote', goodsId: 541, quantity: 1})).d.quote;
+    options.price = '4.50';
+    assert.equal((await s.req('admin/supplier', {action: 'purchase', id: q.id, confirm: true})).r.status, 409);
+    assert.equal(calls.posts.length, 0);
+    s.db.raw.prepare("UPDATE supplier_goods SET blocked_reason='手工服务'").run();
+    assert.equal((await s.req('admin/supplier', {action: 'quote', goodsId: 541, quantity: 1})).r.status, 409);
+    s.db.raw.prepare("UPDATE rate_limits SET count=45 WHERE key LIKE 'didipifa:%'").run();
+    assert.equal((await s.req('admin/supplier', {action: 'account'})).r.status, 429);
+    assert.equal(calls.posts.length, 0);
 });

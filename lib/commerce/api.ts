@@ -3,6 +3,7 @@ import { uid, randomToken, sha, safeEqual, hashPassword, verifyPassword, encrypt
 import { categorySeed, productSeed } from './seed.ts';
 import { PaymentError, paymentConfiguration } from './tron.ts';
 import { createInvoice, invoiceForOrder, checkTransaction, reconcilePayments, paymentDashboard } from './payments.ts';
+import { SupplierError, supplierDashboard, supplierAccount, syncSupplier, quoteSupplier, purchaseSupplier } from './supplier.ts';
 class ApiError extends Error {
     constructor(public status: number, message: string) {
         super(message);
@@ -371,9 +372,19 @@ export async function handleApi(request: Request, env: RuntimeEnv): Promise<Resp
             return json(await settleOrder(db, str(b.orderId, 64), 'payment', '已验证自定义 HMAC 回调', 'custom-hmac', str(b.transactionId, 100), b.amount));
         }
         if (path.startsWith('admin/')) {
-            const roleMap: Record<string, string[]> = { products: ['owner', 'operator'], inventory: ['owner', 'operator'], categories: ['owner', 'operator'], settings: ['owner'], staff: ['owner'], audits: ['owner'], payment: ['owner'] };
+            const roleMap: Record<string, string[]> = { products: ['owner', 'operator'], inventory: ['owner', 'operator'], categories: ['owner', 'operator'], settings: ['owner'], staff: ['owner'], audits: ['owner'], payment: ['owner'], supplier: ['owner'] };
             const section = path.split('/')[1], p = await authenticated(db, request, roleMap[section]);
             await expire(db);
+            if (section === 'supplier' && method === 'GET') return json(await supplierDashboard(db, env));
+            if (section === 'supplier' && method === 'POST') {
+                await limit(db, request, 'admin-supplier', 12);
+                const b = await body(request);
+                if (b.action === 'account') return json(await supplierAccount(db, env));
+                if (b.action === 'sync') return json(await syncSupplier(db, env, p.id));
+                if (b.action === 'quote') return json(await quoteSupplier(db, env, p.id, integer(b.goodsId, 1, 1000000000), integer(b.quantity, 1, 30)));
+                if (b.action === 'purchase' && b.confirm === true) return json(await purchaseSupplier(db, env, p.id, str(b.id, 100)));
+                fail(400, '请选择有效的货源操作；采购需要明确确认');
+            }
             if (section === 'payment' && method === 'GET') return json(await paymentDashboard(db, env));
             if (section === 'payment' && method === 'POST') {
                 await limit(db, request, 'admin-payment', 10);
@@ -518,7 +529,7 @@ export async function handleApi(request: Request, env: RuntimeEnv): Promise<Resp
         fail(404, '接口不存在');
     }
     catch (error) {
-        if (error instanceof ApiError || error instanceof PaymentError)
+        if (error instanceof ApiError || error instanceof PaymentError || error instanceof SupplierError)
             return json({ error: error.message }, error.status);
         console.error('commerce request failed', error instanceof Error ? error.message : 'unknown');
         return json({ error: '服务暂时不可用，请稍后重试或联系管理员' }, 500);

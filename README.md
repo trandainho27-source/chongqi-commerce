@@ -67,3 +67,7 @@ node node_modules/wrangler/bin/wrangler.js d1 migrations apply DB --local --conf
 目前未提供会员注册、钱包充值、分销结算、供应商采购、多商户隔离、邮件 / 短信通知、自动支付退款、文件上传交付。生产大流量压力测试、灾备演练和外部安全审计尚未进行。架构和数据保护已实现，不能据此声称已通过企业认证或安全审计。
 
 部署与操作：[DEPLOY.md](docs/DEPLOY.md) · 支付：[PAYMENTS.md](docs/PAYMENTS.md) · 运营：[OPERATIONS.md](docs/OPERATIONS.md) · 架构：[ARCHITECTURE.md](docs/ARCHITECTURE.md)
+
+## 货源对接
+
+已导入嘀嘀批发公开商品目录与本地图标。管理后台的「货源对接」支持查余额、同步商品、获取报价和确认采购入库。接入与验收状态、Cloudflare 机密配置和响应结构见 [货源对接说明](docs/SUPPLIER.md)。真实采购默认关闭；货源库存不作为本店卡密库存。

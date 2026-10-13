@@ -3,16 +3,9 @@ import { useEffect, useMemo, useState } from 'react';
 import { ArrowRight, RotateCw, Search, ShoppingBag, ShieldCheck, Zap, Headphones, Send, Globe, Sparkles, Code2, FileText, Box, Apple, AtSign as Twitter, ChevronRight, X, Minus, Plus, ArrowUpRight, Check, Copy, SlidersHorizontal, PackageCheck, Clock3, AlertCircle, ExternalLink, Menu } from 'lucide-react';
 import { api, money, date, statuses } from '@/lib/commerce/client';
 import UsdtPayment from './usdt-payment';
+import ProductIcon from './product-icon';
 import type { Catalog, Product, Order } from '@/lib/commerce/types';
 const icons: Record<string, any> = { send: Send, twitter: Twitter, apple: Apple, globe: Globe, sparkles: Sparkles, code: Code2, file: FileText, headphones: Headphones, box: Box };
-const colors: Record<string, string> = { telegram: 'blue', twitter: 'dark', apple: 'gray', google: 'green', ai: 'purple', software: 'orange', digital: 'pink', service: 'teal' };
-function ProductIcon({ product, large = false }: {
-    product: Product;
-    large?: boolean;
-}) {
-    const Icon = icons[({ telegram: 'send', twitter: 'twitter', apple: 'apple', google: 'globe', ai: 'sparkles', software: 'code', digital: 'file', service: 'headphones' } as Record<string, string>)[product.category_id]] || Box;
-    return <div className={`product-icon ${colors[product.category_id] || 'purple'} ${large ? 'large' : ''}`}><Icon size={large ? 46 : 25}/></div>;
-}
 export default function Store({ initialPage = 'shop', initialProduct }: {
     initialPage?: string;
     initialProduct?: string;
@@ -161,7 +154,7 @@ export default function Store({ initialPage = 'shop', initialProduct }: {
         }}>查看全部商品</button></div> : <div className="product-grid">{filtered.map(p => <article key={p.id} className="product-card"><div className="product-card-top"><ProductIcon product={p}/><span className={`tag ${p.featured ? 'violet' : 'muted'}`}>{p.featured ? '热门推荐' : p.tag || '精选商品'}</span></div><button className="product-title" onClick={() => {
             setSelected(p);
             setQty(p.min_qty);
-        }}>{p.name}</button><p className="product-subtitle">{p.subtitle}</p><div className="product-meta"><span><Globe size={12}/>{p.region}</span><span><Zap size={12}/>卡密交付</span></div><div className="product-card-bottom"><div><span className="price">{money(p.price)}</span>{p.compare_price > p.price && <del>{money(p.compare_price)}</del>}<small className={p.stock ? 'stock' : 'out-stock'}><span /> {p.stock ? '库存 ' + p.stock : '暂时缺货'}</small></div><button className="buy-button" disabled={!p.stock} onClick={() => {
+        }}>{p.name}</button><p className="product-subtitle">{p.subtitle}</p><div className="product-meta"><span><Globe size={12}/>{p.region}</span><span><Zap size={12}/>卡密交付</span></div><div className="product-card-bottom"><div><span className="price">{money(p.price)}</span>{p.compare_price > p.price && <del>{money(p.compare_price)}</del>}<small className={p.stock ? 'stock' : 'out-stock'}><span /> {p.stock ? '库存 ' + p.stock : p.id.startsWith('dp-') ? '备货中' : '暂时缺货'}</small></div><button className="buy-button" disabled={!p.stock} onClick={() => {
             setSelected(p);
             setQty(p.min_qty);
         }}>选购 <ArrowRight size={14}/></button></div></article>)}</div>}
